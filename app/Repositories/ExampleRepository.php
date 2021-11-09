@@ -2,8 +2,9 @@
 
 namespace App\Repositories;
 
-use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
 
 class ExampleRepository {
     /**
@@ -53,7 +54,7 @@ class ExampleRepository {
         try {
             return example::findOrFail($id);
         } catch (\Exception $e) {
-            throw $e;
+            throw $e; report($e); return $e;
         }
     }
 
@@ -73,8 +74,7 @@ class ExampleRepository {
             return $example;
         } catch (\Exception $e) {
             DB::rollback();
-            report($e);
-            throw new \Exception($e->getMessage(),$e->getCode());
+            throw $e; report($e); return $e;
         }
     }
 
@@ -93,10 +93,12 @@ class ExampleRepository {
             DB::commit();
             $this->flushCache($id);
             return $example;
+        } catch(ModelNotFoundException $e) {
+            DB::rollback();
+            throw new \Exception("Data tidak ditemukan", 404);
         } catch (\Exception $e) {
             DB::rollback();
-            report($e);
-            throw new \Exception($e->getMessage(),$e->getCode());
+            throw $e; report($e); return $e;
         }
     }
 
@@ -115,9 +117,12 @@ class ExampleRepository {
             DB::commit();
             $this->flushCache($id);
             return $example;
+        } catch(ModelNotFoundException $e) {
+            DB::rollback();
+            throw new \Exception("Data tidak ditemukan", 404);
         } catch (\Exception $e) {
             DB::rollback();
-            throw new \Exception($e->getMessage(),$e->getCode());
+            throw $e; report($e); return $e;
         }
     }
 
