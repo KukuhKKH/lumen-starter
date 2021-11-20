@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1b54054c8a33d4b1439c68b2b4682bc0",
+    "content-hash": "61fc9e378ccfc4fd3a415eec8c4ea294",
     "packages": [
         {
             "name": "anik/form-request",
@@ -903,54 +903,6 @@
                 }
             ],
             "time": "2020-12-29T14:50:06+00:00"
-        },
-        {
-            "name": "flipbox/lumen-generator",
-            "version": "8.2.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/flipboxstudio/lumen-generator.git",
-                "reference": "78edd7588ffb711fe39c34089b532c0d24d737b5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/flipboxstudio/lumen-generator/zipball/78edd7588ffb711fe39c34089b532c0d24d737b5",
-                "reference": "78edd7588ffb711fe39c34089b532c0d24d737b5",
-                "shasum": ""
-            },
-            "require": {
-                "classpreloader/classpreloader": "^3.0|^4.0",
-                "illuminate/console": "^5.5|^6.0|^7.0|^8.0|^8.17",
-                "illuminate/filesystem": "^5.5|^6.0|^7.0|^8.0|^8.17",
-                "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^8.17",
-                "psy/psysh": "0.9.*|0.10.*",
-                "symfony/var-dumper": "^4.2|^4.3|^5.0|^5.1|^5.2"
-            },
-            "suggest": {
-                "anik/form-request": "Required to use form request in Lumen."
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Flipbox\\LumenGenerator\\": "src/LumenGenerator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Krisan Alfa Timur",
-                    "email": "krisan47@gmail.com"
-                }
-            ],
-            "description": "A Lumen Generator You Are Missing",
-            "support": {
-                "issues": "https://github.com/flipboxstudio/lumen-generator/issues",
-                "source": "https://github.com/flipboxstudio/lumen-generator/tree/8.2.1"
-            },
-            "time": "2021-06-14T19:43:48+00:00"
         },
         {
             "name": "graham-campbell/result-type",
@@ -2443,6 +2395,54 @@
                 "source": "https://github.com/laravel/framework"
             },
             "time": "2021-08-25T21:46:48+00:00"
+        },
+        {
+            "name": "kukuhkkh/lumen-generator",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KukuhKKH/lumen-generator.git",
+                "reference": "83e7f5828991cf5142285a546267bfd5889625b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KukuhKKH/lumen-generator/zipball/83e7f5828991cf5142285a546267bfd5889625b7",
+                "reference": "83e7f5828991cf5142285a546267bfd5889625b7",
+                "shasum": ""
+            },
+            "require": {
+                "classpreloader/classpreloader": "^3.0|^4.0",
+                "illuminate/console": "^5.5|^6.0|^7.0|^8.0|^8.17",
+                "illuminate/filesystem": "^5.5|^6.0|^7.0|^8.0|^8.17",
+                "illuminate/support": "^5.5|^6.0|^7.0|^8.0|^8.17",
+                "psy/psysh": "0.9.*|0.10.*",
+                "symfony/var-dumper": "^4.2|^4.3|^5.0|^5.1|^5.2"
+            },
+            "suggest": {
+                "anik/form-request": "Required to use form request in Lumen."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Kukuhkkh\\LumenGenerator\\": "src/LumenGenerator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kukuh Rahmadani",
+                    "email": "krahmadani1@gmail.com"
+                }
+            ],
+            "description": "A Lumen Generator You Are Missing",
+            "support": {
+                "issues": "https://github.com/KukuhKKH/lumen-generator/issues",
+                "source": "https://github.com/KukuhKKH/lumen-generator/tree/1.0.2"
+            },
+            "time": "2021-11-20T17:17:09+00:00"
         },
         {
             "name": "laravel/lumen-framework",
@@ -7751,5 +7751,5 @@
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.0.0"
+    "plugin-api-version": "2.1.0"
 }
